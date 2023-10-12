@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
+import { Navigate } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { UserContext } from "./../UserContext/UserContext";
+import { UserContext } from "../../Components/UserContext/UserContext";
 import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../services/firebase.config";
+
 
 const provider = new GoogleAuthProvider();
 
@@ -14,7 +16,7 @@ export default function AuthPage() {
   const [checked, setChecked] = useState(false);
 
 
-  const { setUser } = useContext(UserContext);
+  const {user,  setUser } = useContext(UserContext);
   //console.log(user);
 
   const authByGoogle = async () => {
@@ -56,6 +58,10 @@ export default function AuthPage() {
     resetForm()
   };
  
+
+  if(user){
+    return <Navigate to="/todo" replace/>
+  }
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">

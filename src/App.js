@@ -1,13 +1,19 @@
 import { useContext } from "react";
-import AuthPage from "./Components/AuthPage/AuthPage";
+import AuthPage from "./pages/AuthPage/AuthPage";
 import TodoList from "./Components/TodoList/TodoList";
-
 import { UserContext } from "./Components/UserContext/UserContext";
 
-function App() {
-  const { user } = useContext(UserContext);
+import RouterApp from "./Components/RouterApp/RouterApp";
 
-  return <>{user ? <TodoList /> : <AuthPage />}</>;
+function App() {
+  //const { user } = useContext(UserContext);
+return(
+  <RouterApp>
+
+  </RouterApp>
+)
+  // without Routers
+  // return <>{user ? <TodoList /> : <AuthPage />}</>;
 }
 
 export default App;
