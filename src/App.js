@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import AuthPage from "./pages/AuthPage/AuthPage";
-import TodoList from "./Components/TodoList/TodoList";
+import TodoList from "./Components/Todo/Todo";
 import { UserContext } from "./Components/UserContext/UserContext";
 
 import RouterApp from "./Components/RouterApp/RouterApp";

@@ -1,5 +1,5 @@
 import React from 'react'
-import TodoList from '../../Components/TodoList/TodoList'
+import Todo from '../../Components/Todo/Todo'
 import { Navigate, Outlet} from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from './../../Components/UserContext/UserContext';
@@ -13,8 +13,8 @@ export default function TodoPage() {
   return (
     <>
      <h2>TodoPage</h2>
-     <Outlet/>
-     <TodoList/>
+     {/* <Outlet/> */}
+     <Todo/>
     </>
   )
 }

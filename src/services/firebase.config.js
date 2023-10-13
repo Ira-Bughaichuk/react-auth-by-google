@@ -1,10 +1,12 @@
 
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDhqPxeFT_3rPLEP1ZLBBqXmRNmBp8fvFA",
   authDomain: "react-auth-by.firebaseapp.com",
+  databaseURL: "https://react-auth-by-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "react-auth-by",
   storageBucket: "react-auth-by.appspot.com",
   messagingSenderId: "441158526388",
@@ -24,6 +26,7 @@ const firebaseConfig = {
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
+export const database = getDatabase();
 
 
 

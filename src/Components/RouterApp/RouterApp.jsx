@@ -13,11 +13,11 @@ export default function RouterApp() {
   return (
     <Routes>
         <Route path="/" element={<AuthPage/>} />
+        <Route path="chat" element={<ChatPage />} />
         <Route path="todo" element={<TodoPage />}>
           <Route path="add" element={<TodoForm />}/>
           <Route path="delete/:id" element={<ModalDelate />}/>
         </Route>
-        <Route path="chat" element={<ChatPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
   )
